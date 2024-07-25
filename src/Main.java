@@ -3,23 +3,24 @@
 public class Main {
     public static void main(String[] args) {
         System.out.println("Задача 1");
-        int sum = 0;
-        int accum = 15_000;
+        int total = 0;
+        int salary = 15_000;
         int month = 0;
-        while(sum<=2_459_000){
-            sum+=accum;
+        while (total <= 2_459_000) {
+            total = total + total / 100;
+            total = total + salary;
             month++;
-            System.out.println("Месяц "+month+", сумма накоплений равна "+sum+" рублей");
+            System.out.println("Месяц " + month + ", сумма накоплений равна " + total + " рублей");
         }
         System.out.println("Задача 2");
         int numForWhile = 0;
-        while (numForWhile<10){
+        while (numForWhile < 10) {
             numForWhile++;
-            System.out.print(numForWhile+" ");
+            System.out.print(numForWhile + " ");
         }
         System.out.println();
-        for(int i =10; i>=1;i--){
-            System.out.print(i+" ");
+        for (int a = 10; a >= 1; a--) {
+            System.out.print(a + " ");
         }
         System.out.println();
 
@@ -27,37 +28,47 @@ public class Main {
         int population = 12_000_000;
         int birth = 17;
         int death = 8;
-        int people = birth-death;
-        int populationYear = population/1000*people;
+        int people = birth - death;
+        int populationYear = population / 1000 * people;
         int year = 0;
-        while(year<10){
-            population+=populationYear;
+        while (year < 10) {
+            population += populationYear;
             year++;
-            System.out.println("Год "+year+", численность населения составляет "+population);
+            System.out.println("Год " + year + ", численность населения составляет " + population);
         }
         System.out.println("Задача 4");
-        int initialDeposit = 15_000;
-        int sevenPercentFromDeposit = initialDeposit/100*7;
-        int needSum = initialDeposit;
-        int month2 = 0;
-        while(needSum<12_000_000){
-            month2++;
-            needSum+=sevenPercentFromDeposit;
-            if (month2 % 6 == 0) {//добавленое условие из 5ой задачи
-                System.out.println("Месяц " + month2 + " Сумма накоплений равна " + needSum);
+        int salary1 = 15000;
+        int total1 = 0;
+        int i = 0;
+        while (total1 <= 12_000_000) {
+            total1 = total1 + total1 * 7 / 100;
+            i++;
+            total1 = total1 + salary1;
+            System.out.println(i + " месяц " + total1 + " сумм накоплений");
+        }
+        System.out.println("Задача 5");
+        int salary2 = 15000;
+        int total2 = 0;
+        int b = 0;
+        while (total2 <= 12_000_000) {
+            total2 = total2 + total2 * 7 / 100;
+            b++;
+            total2 = total2 + salary2;
+            if (b % 6 == 0) {
+                System.out.println(b + " месяц " + total + " сумм накоплений");
             }
         }
         System.out.println("Задача 6");
         int initialDeposit1 = 15_000;
-        int persents = initialDeposit1/100*7;
+        int persents = initialDeposit1 / 100 * 7;
         int accumSum = initialDeposit1;
-        int totalMonths = 9*12;
+        int totalMonths = 9 * 12;
         int months = 0;
-        while (months<totalMonths){
-            accumSum+=persents;
+        while (months < totalMonths) {
+            accumSum += persents;
             months++;
-            if(months%6==0){
-                System.out.println("Месяц "+months+ ", Сумма накоплений равна "+accumSum);
+            if (months % 6 == 0) {
+            System.out.println("Месяц " + months + ", Сумма накоплений равна " + accumSum);
             }
         }
         System.out.println("Задача 7");
@@ -70,9 +81,9 @@ public class Main {
         System.out.println("Задача 8");
         int previousYear = 2023 - 200;
         int nextYear = 2023 + 100;
-        for (int i = 0; i < nextYear; i += 79) {
-            if (i > previousYear) {
-                System.out.println("Годы прилёта кометы " + i);
+        for (int c = 0; c < nextYear; c += 79) {
+            if (c > previousYear) {
+            System.out.println(c);
             }
         }
     }
